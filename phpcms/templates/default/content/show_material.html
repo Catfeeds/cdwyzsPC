@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+     <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <link href="{CSS_PATH}main.css" rel="stylesheet">
+	<link href="{CSS_PATH}css.css" rel="stylesheet">
+<script src="{JS_PATH}/jquery1.42.min.js" type="text/javascript"></script>
+<script src="{JS_PATH}jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <!--header start-->
+	  {template "content","header"} 
+	<!--header end-->
+	<div class="cl_item">
+	   <div class="wrap">
+	      <div class="fl">Material <span>材料展厅</span></div>
+		  <div class="curr fr">当前位置：{catpos($catid)}</div>
+	   </div>
+	</div>
+	<!--材料展厅开始-->
+	<div class="w1200 pad" >
+	      <div class="clzt_left">
+	     <ul>
+		    <li class="fg-active"><a href="{$CATEGORYS[17]['url']}">全部</a></li>
+			<li><a href="{$CATEGORYS[24]['url']}">瓷砖</a></li>
+			<li><a href="{$CATEGORYS[25]['url']}">家具家电</a></li>
+			<li><a href="{$CATEGORYS[26]['url']}">木地板</a></li>
+			<li><a href="{$CATEGORYS[27]['url']}">洁具/卫浴</a></li>
+			<li><a href="{$CATEGORYS[28]['url']}">橱柜</a></li>
+			<li><a href="{$CATEGORYS[29]['url']}">门</a></li>
+		 </ul>
+	   </div>
+	    <div class="clzt_right">
+	        <div class="clzt_content">
+		       {$content}
+			</div>
+	   </div>
+	   <div style="clear:both"></div>
+	  
+	   <div class="page">
+	   </div>
+	</div>
+	<!--材料展厅结束-->
+    <!--footer start-->
+	{template "content","footer"} 
+    <!--footer end-->
+  </body>
+</html>

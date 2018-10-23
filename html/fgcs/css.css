@@ -1,0 +1,43 @@
+*{ padding: 0; margin: 0; list-style: none;}
+#back{width:100%; height:auto; background-image: url(fgcs_03.jpg); margin: 0 auto; background-size:100% ;}
+#head-ul{ font-size:16px; text-align: center;}
+#head-ul>li.active a{color: #d51c17;background-color: #f8f8f8;border-bottom: #d51c17 solid 2px;}
+.xuan1{width:50%; height:auto; margin: 0 auto;margin-top:5%;}
+.xuan1_li{width:26%; height:auto; float: left; margin-right:3%; margin-left: 3%;cursor:pointer;}
+.xuan1_li img{width:100%;}
+
+.xuan2{width:62%; height:auto; margin: 0 auto;margin-top:5%;}
+.xuan2_li{width:21%; height:auto; float: left; margin-right:2%; margin-left:2%;cursor:pointer;}
+.xuan2_li img{width:100%;}
+
+.xuan3{width:55%; height:auto; margin:0 auto;margin-top:3%;}
+.xuan3_li{width:25%; height:auto; float: left; margin-right:4%; margin-left:4%; cursor:pointer; margin-top:2.5%;}
+.xuan3_li img{width:100%;}
+
+.xuan4{width:55%; height:auto; margin:0 auto;margin-top:3%;}
+.xuan4_li{width:25%; height:auto; float: left; margin-right:4%; margin-left:4%; cursor:pointer; margin-top:2.5%;}
+.xuan4_li img{width:100%;}
+
+.xuan_active{ border-radius:37.5%; box-shadow:8px 12px 10px #ccc; top:1.6%;}/*top:1.2%; right: 0.1%; */
+.xuan1_yy{position:absolute; width:100%; height:96.5%;}
+.ce-btn{width:100%; height: auto;}
+.ce-btn img{margin-top:5%;width:16%; margin-left:42%;margin-right:42%;cursor:pointer; margin-bottom: 3%;}
+
+.alert{width:100%; height:100%; position:fixed; top:0; left:0; background-color: black; background: rgba(0, 0, 0, .8); display: none; margin: 0; padding: 0;}
+.alert—box{position:absolute; bottom:75%; text-align: center; width:100%;}
+#alert-off{color:#333; font-size:5em; position:absolute; right:21%; top:2%;cursor:pointer;}
+.alert—img{height:auto; width:60%;}
+
+footer{ font-size: 1.2em; color: white; line-height: 1.6; padding-top: 12px;}
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+
+/* 小屏幕（平板，大于等于 768px） */
+ @media (max-width:1200px) { 
+	#head-ul{font-size:12px;}
+	#head-ul>li>a{  padding:15px 10px;}
+	}
+ @media (max-width:1000px) { 
+	#head-ul{font-size:12px;}
+	#head-ul>li>a{  padding:15px 3px;}
+	}

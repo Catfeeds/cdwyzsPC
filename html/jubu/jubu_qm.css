@@ -1,0 +1,19 @@
+
+.pic{background-image:url('/html/jubu/qm_01.jpg') ;background-size:100%;background-repeat: no-repeat;width:100%;text-align: center;}
+.pic:before{content: ""; display: block; padding-top:21.5%;}
+.bn{position:relative; z-index: 1; bottom:6.5em;}
+.pic2{background-image:url('/html/jubu/qm_03.jpg') ;background-size:100%;background-repeat: no-repeat;width:100%;text-align: center;}
+.pic2:before{content: ""; display: block; padding-top:144.8%;}
+.bn2{position:relative; z-index: 1; bottom:17.5em;}
+@media(max-width:1650px) 
+{ 
+.bj_f{height:80%;}
+}
+@media(max-width:1400px) 
+{ 
+.bj_f{height:70%;}
+}
+@media(max-width:1230px) 
+{ 
+.bj_f{height:60%;}
+}

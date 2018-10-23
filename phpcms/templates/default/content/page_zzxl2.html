@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+     <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+	<!--移动端跳转代码-->
+	<meta http-equiv="mobile-agent" content="format=xhtml;url=http://m.cdwyzs.cn/cn/zzxl/">
+	<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="http://m.cdwyzs.cn";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+    <link href="{CSS_PATH}main.css" rel="stylesheet">
+	<link href="{CSS_PATH}css.css" rel="stylesheet">
+	<link rel="stylesheet" href="{CSS_PATH}swiper.min.css">
+	<script src="{JS_PATH}/jquery-1.4.4.min.js" type="text/javascript"></script>
+	<style>
+    	.zxlZhengZ img {
+    		display: block;
+    	}
+    	.zxlZhengZ .zxlBanner {
+    		min-width: 1200px;
+    		width: 100%;
+    		overflow: hidden;
+    	}
+    	.zxlZhengZ .zxlConBg {
+    		width: 100%;
+    		min-width: 1200px;
+    		overflow: hidden;
+    	}
+    	.zxlZhengZ .zxlCenter {
+    		margin: 0 auto;
+    		width: 1200px;
+    	}
+    	.zxlZhengZ .zxlConOne {
+    		background-color: #fff;
+    	}
+    	.zxlZhengZ .zxlConOne .zxlHead {
+    		position: relative;
+    		height: auto;
+    		line-height: normal;
+    	}
+    	.zxlZhengZ .zxlConOne .zxlHead a {
+    		position: absolute;
+    		display: block;
+    		top: 68%;
+    		left: 36%;
+    		width: 392px;
+    		height: 112px;
+    		line-height: 112px;
+    		text-align: center;
+    		font-size: 57.26px;
+    		color: #ffff97;
+    	}
+    	.zxlZhengZ .zxlConOne ul {
+    		margin-top: 16px;
+    	}
+    	.zxlZhengZ .zxlConOne ul li {
+    		float: left;
+    		width: 580px;
+    		height: 196px;
+    		border: 4px solid #4983c0;
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418_03.png");
+    	}
+    	.zxlZhengZ .zxlConOne ul li:first-child {
+    		padding: 34px 0 0 184px;
+    		width: 396px;
+    		height: 162px;
+    	}
+    	.zxlZhengZ .zxlConOne ul li:first-child p {
+    		width: 270px;
+    		line-height: 46px;
+    		font-size: 26.27px;
+    		font-weight: bold;
+    		color: #fe2f7c;
+    		border-bottom: 1px dashed #fe2f7c;
+    	}
+    	.zxlZhengZ .zxlConOne form {
+    		margin-top: 19px;
+    	}
+    	.zxlZhengZ .zxlConOne .FormLeft {
+    		float: left;
+    		width: 192px;
+    	}
+    	.zxlZhengZ .zxlConOne .FormLeft input[name="name"] {
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418Bg_03.png");
+    	}
+    	.zxlZhengZ .zxlConOne .FormLeft input {
+    		margin-bottom: 11px;
+    		padding-left: 34px;
+    		width: 150px;
+    		height: 24px;
+    		background-color: #ffe0d8;
+    		border: none;
+    		background-repeat: no-repeat;
+    		background-position: 6px 3px;
+    	}
+    	.zxlZhengZ .zxlConOne .FormLeft input[name="tel"] {
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418Bg_04.png");
+    	}
+    	.zxlZhengZ .zxlConOne .FormRight {
+    		float: left;
+    		padding-top: 3px;
+    		padding-left: 2px;
+    		width: 48px;
+    		height: 52px;
+    		background-color: #fff001;
+    		font-size: 19.19px;
+    		color: #f25159;
+    		text-align: center;
+    		font-weight: bold;
+    		box-shadow: 4px 4px #d5981a;
+    		letter-spacing: 2px;
+    		cursor: pointer;
+    	}
+    	.zxlZhengZ .zxlConOne ul li:last-child {
+    		float: right;
+    		padding: 20px;
+    		width: 540px;
+    		height: 156px;
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418_04.png");
+    	}
+    	.zxlZhengZ .zxlConOne ul li:last-child p {
+    		line-height: 72px;
+    		font-size: 63.03px;
+    		color: #fe2f7c;
+    		letter-spacing: 3px;
+    	}
+    	.zxlZhengZ .zxlConOne ul li:last-child small {
+    		line-height: 30px;
+    		font-size: 21.11px;
+    		color: #fe2f7c;
+    	}
+    	.zxlZhengZ .zxlConOne ul li:last-child a {
+    		margin-top: 15px;
+    		padding-left: 10px;
+    		display: block;
+    		width: 308px;
+    		height: 36px;
+    		line-height: 36px;
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418Bg_05.png");
+    		font-size: 20.21px;
+    		color: #fff;
+    	}
+    	.zxlZhengZ .zxlConTwo,
+    	.zxlZhengZ .zxlConFour {
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418Bg_01.jpg");
+    	}
+    	.zxlZhengZ .zxlConTwo .zxlHead {
+    		height: 180px;
+    		line-height: 237px;
+    		text-align: center;
+    	}
+    	.zxlZhengZ .zxlConTwo .zxlHead img {
+    		display: initial;
+    	}
+    	
+    	.zxlZhengZ .zxlConTHree,
+    	.zxlZhengZ .zxlConFive {
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418Bg_02.jpg");
+    	}
+    	.zxlZhengZ .zxlHead {
+    		height: 214px;
+    		line-height: 326px;
+    		text-align: center;
+    	}
+    	.zxlZhengZ .zxlHead img {
+    		display: initial;
+    	}
+    	.zxlZhengZ .zxlConTHree .zxlPingP {
+    		position: relative;
+    		margin-bottom: 52px;
+    	}
+    	.zxlZhengZ .zxlConTHree .zxlPingP h3 {
+    		position: absolute;
+    		top: 24px;
+    		left: 0;
+    		right: 0;
+    		margin: auto;
+    		font-size: 45px;
+    		color: #fff;
+    		text-align: center;
+    	}
+    	.zxlZhengZ .zxlConTHree .zxlPingP h3 span {
+    		color: #007cfe;
+    		font-size: 45px;
+    	}
+    	.zxlZhengZ .zxlConFour .zxlDeX {
+    		position: relative;
+    		margin-bottom: 46px;
+    	}
+    	.zxlZhengZ .zxlConFour .zxlDeX a {
+    		position: absolute;
+    		bottom: 45px;
+    		left: 444px;
+    		display: block;
+    		padding-top: 5px;
+    		width: 284px;
+    		height: 79px;
+    		line-height: 32px;
+    		background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418Bg_06.png");
+    		border-radius: 30px;
+    		box-shadow: 8px 8px #00c5b7;
+    		font-size: 39.69px;
+    		font-weight: bold;
+    		color: #f12677;
+    		text-align: center;
+    		
+    	}
+    	.zxlZhengZ .zxlConFour .zxlDeX a p {
+    		font-size: 20.7px;
+    		color: #4e4d4d;
+    		
+    	}
+    	.zxlZhengZ .zxlConFive .zxlWuY {
+    		position: relative;
+    		margin-bottom: 81px;
+    		background-color: #fff;
+    	}
+    	.zxlZhengZ .zxlConFive .zxlWuY ul {
+    		position: absolute;
+    		font-size: 0;
+    		width: 1200px;
+    		bottom: 56px;
+    	}
+    	.zxlZhengZ .zxlConFive .zxlWuY ul li {
+    		display: inline-block;
+    		font-size: 28px;
+    		color: #484848;
+    		width: 25%;
+    		text-align: center;
+    	}
+    	.zxlZhengZ .zxlConSix .zxlFengG ul li {
+    		float: left;
+    		width: 586px;
+    		height: 480px;
+    		overflow: hidden;
+    	}
+    	.zxlZhengZ .zxlConSix .zxlFengG ul li img {
+    		width: 586px;
+    	}
+    	.zxlZhengZ .zxlConSix .zxlFengG ul li p {
+    		line-height: 62px;
+    		font-size: 30px;
+    		color: #9e7b5e;
+    		text-align: center;
+    	}
+    	.zxlZhengZ .zxlConSix .zxlFengG ul li a {
+    		font-size: 22.34px;
+    		border-radius: 14px;
+    		background: linear-gradient(#8e92fd, #5156fc);
+    		background: -webkit-linear-gradient(#8e92fd, #5156fc);
+    		background: -o-linear-gradient(#8e92fd, #5156fc);
+    		background: -moz-linear-gradient(#8e92fd, #5156fc);
+    		color: #fff;
+    		padding: 2px 14px 4px;
+    	}
+    	.zxlZhengZ .zxlConSeven {
+    		display: block;
+    		width: 676px;
+    		height: 140px;
+    		line-height: 140px;
+    		text-align: center;
+    		background: linear-gradient(#8e92fd, #5156fc);
+    		background: -webkit-linear-gradient(#8e92fd, #5156fc);
+    		background: -o-linear-gradient(#8e92fd, #5156fc);
+    		background: -moz-linear-gradient(#8e92fd, #5156fc);
+    		font-size: 91.26px;
+    		color: #fff;
+    		letter-spacing: 12px;
+    		margin: 75px auto 65px;
+    		border-radius: 30px;
+    		box-shadow: 8px 8px 18px #765377;
+    	}
+    	
+    	.swiper-container {
+    		margin: 60px 0 160px 0;
+	        width: 1200px;
+	        height: 550px;
+	    }
+	    .swiper-pagination {
+	    	top: 180px;
+	    }
+	    .swiper-pagination-bullet {
+	        width: 200px;
+	        height: 60px;
+	        background-color: #fff;
+	        border-radius: 0;
+	        font-size: 38px;
+	        color: #929292;
+	        font-weight: bold;
+	        opacity: 1;
+	    }
+	    .swiper-pagination-bullet-active {
+	        color:#fff;
+	        background: #9e7b5d;
+	    }
+	    .swiper-slide {
+	    	color: #fff;
+	    	letter-spacing: 2px;
+	    }
+	    .swiper-slide h2 {
+			margin: 38px 0 0 28px;
+	    	line-height: 102px;
+	    	font-size: 42px;
+	    }
+	    .swiper-slide p {
+			margin-left: 28px;
+	    	line-height: 50px;
+	    	font-size: 23px;
+	    }
+	    .One {
+	    	background-image: url("http://www.cdwyzs.cn/statics/images/zzxl/418/418_06.jpg");
+	    }
+    </style>
+  </head>
+  <body>
+    <!--header start-->
+	{template "content","header"} 
+	<!--header end-->
+
+	<!--整装系列开始-->
+    <div class="zxlZhengZ" style="width:100%;min-width:1200px">
+    	<div class="zxlZhengZ" style="width:100%;min-width:1200px">
+    	
+    	<div class="zxlBanner"><img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_01.jpg" width="100%" /></div>
+    	<div class="zxlConBg zxlConOne">
+    		<div class="zxlCenter">
+    			<div class="zxlHead">
+	    			<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_02.jpg" width="100%" />
+	    			<a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671" >网络预约专享</a>
+	    		</div>
+	    		<ul>
+	    			<li>
+	    				<p>疯抢88个免费设计名额</p>
+	    				<form id="myform" action="http://web.cdwyzs.cn/other/add.php" method="post">
+	    					<div class="FormLeft">
+	    						<input name="name" type="text" placeholder="您的称呼"/>
+	    						<input name="tel" type="text" placeholder="您的手机号码"/>
+								<input type="hidden" name="from" value="PC套系留言">
+	    					</div>
+	    					<div class="FormRight" onclick="document.getElementById('myform').submit()">立抢免单</div>
+	    				</form>
+	    			</li>
+	    			<li>
+	    				<P>3秒快速报价</P>
+	    				<small>让你3秒掌握自己装修资金筹备</small>
+	    				<a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671" >3秒快速报价  立即咨询有惊喜</a>
+	    			</li>
+	    		</ul>
+    		</div>
+    	</div>
+    	<div class="zxlConBg zxlConTwo">
+    		<div class="zxlCenter" style="position: relative;">
+    			<div class="zxlHead"><img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_05.png" width="720" height="57" /></div>
+    			<!-- Swiper -->
+			    <div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide One">
+			            	<h2>客餐厅及过道</h2>
+			            	<p>①原墙顶面白灰铲除</p>
+			            	<p>②生态墙固地固</p>
+			            	<p>③原墙铲除后修复</p>
+			            	<p>④电视墙设计造型</p>
+			            	<p>⑤墙、顶面乳胶漆底漆，面漆</p>
+			            	<p>⑥12厚环保复合木地板及铺贴</p>
+			            </div>
+			            <div class="swiper-slide Two">
+			            	<h2>卧室（主卧及次卧）</h2>
+			            	<p>①原墙顶面白灰铲除</p>
+			            	<p>②生态墙固地固</p>
+			            	<p>③原墙铲除后修复</p>
+			            	<p>④墙、顶面乳胶漆底漆，面漆</p>
+			            	<p>⑤木地板及铺贴</p>
+			            	<p>⑥实木门及门套</p>
+							<p>⑦门锁合叶及五金</p>
+							<p>⑧飘窗设计及装饰<p/>
+							<p>⑨木地板踢脚线及铺贴</p>
+			            </div>
+			            <div class="swiper-slide Three">
+			            	<h2>厨房</h2>
+			            	<p>①墙、地砖铺贴及辅料</p>
+			            	<p>②门槛石及安装</p>
+			            	<p>③铝扣板吊顶含阴角线</p>
+			            	<p>④包水管工艺</p>
+			            	<p>品牌橱柜（地柜和吊柜）</p>
+			            	<p>⑥厨房专业钛合金门</p>
+							<p>⑦地漏五金</p>
+			            </div>
+			            <div class="swiper-slide Four">
+			            	<h2>卫生间</h2>
+			            	<p>①墙、地砖铺贴及辅料</p>
+			            	<p>②门槛石及安装</p>
+			            	<p>③铝扣板吊顶含阴角线</p>
+			            	<p>④包水管工艺（单根）</p>
+			            	<p>⑤卫生间专用钛合金门</p>
+			            	<p>⑥地漏五金</p>
+			            </div>
+			            <div class="swiper-slide Five">
+			            	<h2>阳台</h2>
+			            	<p>①顶面乳胶漆底漆，面漆</p>
+			            	<p>②地砖铺贴及辅料</p>
+			            	<p>③地漏五金</p>
+			            </div>
+			            <div class="swiper-slide One">
+			            	<h2>客餐厅及过道</h2>
+			            	<p>①原墙顶面白灰铲除</p>
+			            	<p>②生态墙固地固</p>
+			            	<p>③原墙铲除后修复</p>
+			            	<p>④电视墙设计造型</p>
+			            	<p>⑤墙、顶面乳胶漆底漆，面漆</p>
+			            	<p>⑥12厚环保复合木地板及铺贴</p>
+			            </div>
+			        </div>
+			    </div>
+			    <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+    		</div>
+    	</div>
+    	<div class="zxlConBg zxlConTHree">
+    		<div class="zxlCenter">
+    			<div class="zxlHead"><img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_07.png" width="640" height="112" /></div>
+    			<div class="zxlPingP">
+    			<h3>>>一线品牌配置， F2C工厂直销<span>立省30%装修费用</span><<</h3>
+    			<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_08.jpg" width="100%" />
+    		</div>
+    		</div>
+    	</div>
+    	<div class="zxlConBg zxlConFour">
+    		<div class="zxlCenter">
+    			<div class="zxlHead"><img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_09.png" width="640" height="112" /></div>
+    			<div class="zxlDeX">
+    			<a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671"><p>网络预约专享</p>立即领取</a>
+    			<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_10.jpg" width="100%" />
+    		</div>
+    		</div>
+    	</div>
+    	<div class="zxlConBg zxlConFive">
+    		<div class="zxlCenter">
+    			<div class="zxlHead"><img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_11.png" width="640" height="112" /></div>
+    			<div class="zxlWuY">
+	    			<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_12.png" width="100%" />
+	    			<ul>
+	    				<li>0增项&nbsp;</li>
+	    				<li>装修贷款</li>
+	    				<li>&nbsp;金牌工长</li>
+	    				<li>&nbsp;&nbsp;&nbsp;&nbsp;九段验收</li>
+	    			</ul>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="zxlConBg zxlConSix">
+    		<div class="zxlCenter">
+    			<div class="zxlHead"><img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_13.png" width="640" height="112" /></div>
+    			<div class="zxlFengG">
+	    			<ul>
+	    				
+	    				<li>
+	    					<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_14.jpg" width="100%" />
+	    					<p>欧式风格 <a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671">了解更多 >></a></p>
+	    				</li>
+	    				<li style="float: right">
+	    					<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_15.jpg" width="100%" />
+	    					<p>现代简约 <a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671">了解更多 >></a></p>
+	    				</li>
+	    				<li>
+	    					<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_16.jpg" width="100%" />
+	    					<p>北欧风格 <a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671">了解更多 >></a></p>
+	    				</li>
+	    				<li style="float: right">
+	    					<img src="http://www.cdwyzs.cn/statics/images/zzxl/418/418_17.jpg" width="100%" />
+	    					<p>美式风格 <a href="http://dvt.zoosnet.net/LR/Chatpre.aspx?id=DVT37588334&lng=cn&r=&rf1=&rf2=&p=http%3A//cdwyzs.cn/&cid=1497662184100319259840&sid=1506394335321378879671">了解更多 >></a></p>
+	    				</li>
+	    			</ul>
+    			</div>
+    		</div>
+    	</div>
+    	<a href="#" class="zxlConSeven">返回顶部<a>
+	</div>
+	</div>
+	<!--整装系列结束-->
+
+	<!--header start-->
+	{template "content","footer"} 
+	<!--header end-->
+	<!-- Swiper JS -->
+    <script src="{JS_PATH}swiper.min.js"></script>
+    <script>
+	var data = {"da":[{"0":"客餐厅","1":"主卧","2":"次卧","3":"厨房","4":"卫生间","5":"阳台"}]};
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationBulletRender: function (swiper, index, className) {
+            return '<span class="' + className + '">' + (data.da[0][index]) + '</span>';
+        }
+    });
+    </script>
+  </body>
+</html>

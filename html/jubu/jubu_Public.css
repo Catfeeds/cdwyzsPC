@@ -1,0 +1,56 @@
+*{margin:0; padding:0; font-family:"微软雅黑";color:white;}
+a{text-decoration: none; color: black;}
+img{ border:0;vertical-align: middle}
+li{ list-style-type :none;}
+.top_nav li:nth-child(2){border-bottom: 4px solid #005c34;}
+.duibi_box{width: 70%; margin:0 auto;
+display: flex;display: -ms-flexbox;}
+.duibi_ul{width: 10%;}
+.duibi_ul li{width:50%; height:auto; border: solid 2px black; border-radius:50% 50%; background: white; color: black; text-align: center; margin:0 auto; margin-top:8%;cursor: pointer;position: relative;}
+.yh_box{width:70%;height:auto; margin:0 auto;display: flex;display: -ms-flexbox;justify-content:space-between}
+.hy_box_tb{
+	width:22%;border: 3px solid rgba(0,0,0,0.1);
+	position: relative;
+	transition:All 0.5s ease-in-out;
+	margin-right:4%;
+	}
+.hy_box_tb:hover{
+	top:-1px;
+	box-shadow:0px 0px 25px rgba(0,0,0,0.5);
+	}
+.al_lg{width:64%; margin: 0 auto;
+	display:flex;justify-content:space-between;
+	margin-bottom: 75px;display:-ms-flexbox;
+	}
+.al_sm{
+	display:flex;justify-content:space-between;
+	}
+.al_sm a:nth-child(1){
+			margin-right:0.7em;
+		}
+.al_md{display: flex;flex-direction:column;
+		justify-content: space-between;
+		display: -ms-flexbox;-ms-flex-wrap:wrap;
+		margin-left: 1em;margin-left:0.5em;}
+.db_ico{position: absolute;left: -5px; top: -5px; display: none;}
+.db_p{position: absolute;left:0px; top: 0px;color: black;}
+
+.bj{width:100%; margin: 0 auto;margin-top:3em;margin-bottom: 3em;}
+.bj_box{background-image:url('/html/jubu/bj_1.jpg');width:70%; height: auto;margin: 0 auto; background-size: 100%; background-repeat:no-repeat;}
+.bj_l{width:55%;height:100%;float:left;}
+.bj_f{width:25%;display: flex;flex-direction:column;justify-content:center;height:100%;float: left;}
+.bj_f input{border:none;height:2em;width:80%;color:#666;padding-left:5%;margin-top: 1em;}
+.bj_r{width:20%;height:100%;float: left;cursor: pointer;}
+
+.cp_big{
+	width: 100%;
+	margin-bottom: 5em;
+	background: #f0f4fd;
+}
+.cp_img{
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.cp_img:first-child{
+	padding-top: 3em;
+}
